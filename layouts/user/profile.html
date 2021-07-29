@@ -1,0 +1,87 @@
+{{ define "main" }}
+
+<section id="profile">
+
+    <div>
+        <a href="{{ .Site.BaseURL }}"><img src="./img/logo_dd_w.svg" width="50" height="50" alt="Logo de l'app DealsDays"></a>
+        <button type="button">Déconnexion</button>
+    </div>
+
+    <form>
+        <img src="img/profile.svg" id="profilePic" alt="Photo de profil">
+        <label for="photo">Importer une image</label>
+        <input type="file" id="photo">
+
+        <h2>Vos identifiants</h2>
+        <div class="identity">
+            <div>
+                <p>Adresse email</p>
+                <p>jeanne.doe@gmail.com</p>
+            </div>
+            <button type="button">Modifier</button>
+        </div>
+        <div class="identity">
+            <div>
+                <p>Mot de passe</p>
+                <p>**********</p>
+            </div>
+            <button type="button">Modifier</button>
+        </div>
+        <hr>
+
+        <input type="radio" name="civil" id="civilMrs" checked>
+        <label for="civilMrs">Madame</label>
+
+        <input type="radio" name="civil" id="civilMr">
+        <label for="civilMr">Monsieur</label>
+
+        <label for="name">Prénom</label>
+        <input type="text" id="name" value="Jeanne" required>
+
+        <label for="surname">Nom</label>
+        <input type="text" id="surname" value="Doe" required>
+
+        <label for="birth">Date de naissance (facultatif)</label>
+        <input type="date" id="birth" placeholder="JJ/MM/AAAA">
+
+        <label for="tel">Téléphone mobile (facultatif)</label>
+        <input type="tel" id="tel" value="06 12 43 56 87">
+
+        <hr>
+
+        <h2>Votre adresse de facturation</h2>
+
+        <label for="address">Numéro et rue</label>
+        <input type="text" id="address" value="15 avenue Alan Turing" required>
+
+        <label for="complement">Complément d'adresse (facultatif)</label>
+        <input type="text" id="complement" placeholder="Étage, digicode...">
+
+        <label for="cp">Code postal</label>
+        <input type="text" id="cp" value="59300" required>
+
+        <label for="city">Ville</label>
+        <input type="text" id="city" value="Valenciennes" required>
+
+        <hr>
+
+        <h2>Newsletter</h2>
+
+        <input type="checkbox" id="news">
+        <label for="news">Je souhaite recevoirs les actus Dealsays</label>
+
+        <button type="submit" class="big orange">Valider mes informations</button>
+
+    </form>
+    
+    <a href="#">Nous contacter</a>
+    <a href="#">Conditions générales d'Utilisation</a>
+    <a href="#">Mentions légales</a>
+
+</section>
+
+{{ end }}
+
+{{ define "navigation" }}
+    {{ partial "navigation" }}
+{{ end }}

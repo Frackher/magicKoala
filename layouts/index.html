@@ -1,0 +1,19 @@
+{{ define "main" }}
+    <section id="splash">
+        <img id="logo" src="./img/logo_dd_w.svg" width="150" height="150" alt="Logo de l'app DealsDays">
+        <h1>Découvrez<br>les meilleurs deals<br>près de chez vous.</h1>
+        <p>Trouvez votre prochain deal,<br>pour vous ou vos proches,<br>où que vous soyez.</p>
+        <button type="button" class="big orange bottom">Trouver mon deal</button>
+    </section>
+
+    <aside id="geoloc">
+        <button class="close mi-round">close</button>
+        <label for="search">Où cherchez-vous ?</label>
+        <fieldset>
+            <button type="button" class="search mi-round">search</button>
+            <input type="text" id="search" value="Saisir une ville et un rayon">
+        </fieldset>
+        <button type="button" class="geoloc">Me géolocaliser</button>
+        <button type="button" class="big orange bottom">C'est parti</button>
+    </aside>
+{{ end }}

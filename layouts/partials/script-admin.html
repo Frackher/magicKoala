@@ -1,0 +1,2 @@
+{{ $bootstrap := resources.Get "/bootstrap/js/bootstrap.min.js" }}
+<script src="{{ $bootstrap.Permalink }}" async></script>

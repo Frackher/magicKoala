@@ -1,0 +1,34 @@
+{{ define "main" }}
+
+<section id="invoice">
+    <div>
+        <a href="{{ .Site.BaseURL }}"><img src="./img/logo_dd_w.svg" width="50" height="50" alt="Logo de l'app DealsDays"></a>
+        <button type="button">Retour</button>
+    </div>
+    <div>
+        <h1>Facturation</h1>
+
+        <label for="address">Adresse</label>
+        <input type="text" placeholder="Numéro et nom de rue" id="address" required>
+        
+        <div id="complement">
+            <label for="complet">Complément</label>
+            <input type="text" placeholder="Étage, digicode..." id="complet">
+            <a href="#">Supprimer</a>
+        </div>
+
+        <label for="cp">Code postal</label>
+        <input type="text" id="cp" required>
+
+        <label for="city">Ville</label>
+        <input type="text" id="city" required>
+
+        <a href="#">Ajouter un complément d'adresse</a>
+
+        <button type="button" class="big orange">Valider mon adresse</button>
+
+        <p>En validant votre adresse de facturation, vous serez redirigé vers notre service de <b>paiement sécurisé</b></p>
+    </div>
+</section>
+
+{{ end }}

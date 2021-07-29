@@ -1,0 +1,9 @@
+{{ define "main" }}
+    Single Page Default
+    {{ .Params.type }}<br>
+    {{ .Params.layout }}<br>
+    {{ printf "%#v" $.Site }}<br>
+    {{ printf "%#v" .Permalink }}<br>
+    {{ printf "%#v" . }}<br>
+    {{ .Params }}
+{{ end }}

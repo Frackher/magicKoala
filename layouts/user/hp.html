@@ -1,0 +1,153 @@
+{{ define "search" }}
+    {{- partial "search.html" . -}}
+{{ end }}
+
+{{ define "main" }}
+    <section id="smallFilter">
+        <div class="on">Nouveautés</div>
+        <div>Taux de remise</div>
+        <div>Distance</div>
+        <div>Autre option</div>
+    </section>
+    
+    <section id="dealList">
+        <div>
+            <a href="{{ ref . `/user/store` }}"><img src="./img/ramen.webp" width="256" height="256" title="<nom commerçant>"></a>
+            <div class="infos">
+                <h3>Nom du commerce</h3>
+                <p>77 Rue du Quesnoy<br>59300 Valenciennes</p>
+                <div class="mi-round">sell</div>
+                <div>-30%</div>
+            </div>
+            <div class="plus">
+                <a href="#" class="mi-round">public</a>
+                <div>0,8 km</div>
+            </div>
+        </div>
+
+        <div class="no-web">
+            <a href="{{ ref . `/user/store` }}"><img src="./img/ramen.webp" width="256" height="256" title="<nom commerçant>"></a>
+            <div class="infos">
+                <h3>Nom du commerce</h3>
+                <p>77 Rue du Quesnoy<br>59300 Valenciennes</p>
+                <div class="mi-round">sell</div>
+                <div>-30%</div>
+            </div>
+            <div class="plus">
+                <div>10,8 km</div>
+            </div>
+        </div>
+
+        <div>
+            <a href="{{ ref . `/user/store` }}"><img src="./img/ramen.webp" width="256" height="256" title="<nom commerçant>"></a>
+            <div class="infos">
+                <h3>Nom du commerce</h3>
+                <p>77 Rue du Quesnoy<br>59300 Valenciennes</p>
+                <div class="mi-round">sell</div>
+                <div>Jusqu'à -40%</div>
+            </div>
+            <div class="plus">
+                <a href="#" class="mi-round">public</a>
+                <div>0,8 km</div>
+            </div>
+        </div>
+
+        <div>
+            <a href="{{ ref . `/user/store` }}"><img src="./img/ramen.webp" width="256" height="256" title="<nom commerçant>"></a>
+            <div class="infos">
+                <h3>Nom du commerce</h3>
+                <p>77 Rue du Quesnoy<br>59300 Valenciennes</p>
+                <div class="mi-round">sell</div>
+                <div>-30%</div>
+            </div>
+            <div class="plus">
+                <a href="#" class="mi-round">public</a>
+                <div>0,8 km</div>
+            </div>
+        </div>
+    </section>
+
+    <aside id="filter">
+        <button type="button" class="mi-round">arrow_back</button>
+        <h2>Filtrer</h2>
+        <button type="button" class="reset">Réinitialiser</button>
+        <div class="change">
+            <button type="button" class="on" data-id="cat">Catégories</button>
+            <button type="button" data-id="hours">Horaires</button>
+        </div>
+        <form id="cat">
+            <fieldset>
+                <input id="cat-1" type="checkbox">
+                <label for="cat-1"><div class="mi-round">check_circle_outline</div>Loisirs</label>
+            </fieldset>
+            <hr>
+            <fieldset>
+                <input id="cat-2" type="checkbox">
+                <label for="cat-2"><div class="mi-round">check_circle_outline</div>Restaurants</label>
+            </fieldset>
+            <hr>
+            <fieldset>
+                <input id="cat-3" type="checkbox">
+                <label for="cat-3"><div class="mi-round">check_circle_outline</div>Hôtels</label>
+            </fieldset>
+            <hr>
+            <fieldset>
+                <input id="cat-4" type="checkbox">
+                <label for="cat-4"><div class="mi-round">check_circle_outline</div>Automobile</label>
+            </fieldset>
+            <hr>
+            <fieldset>
+                <input id="cat-5" type="checkbox">
+                <label for="cat-5"><div class="mi-round">check_circle_outline</div>Animaux</label>
+            </fieldset>
+            <hr>
+            <fieldset>
+                <input id="cat-6" type="checkbox">
+                <label for="cat-6"><div class="mi-round">check_circle_outline</div>Coiffeurs</label>
+            </fieldset> 
+        </form>
+
+        <form id="hours" class="dNone">
+            <fieldset>
+                <input id="hours-1" type="checkbox">
+                <label for="hours-1"><div class="mi-round">check_circle_outline</div>8h00 - 10h00</label>
+            </fieldset>
+            <hr>
+            <fieldset>
+                <input id="hours-2" type="checkbox">
+                <label for="hours-2"><div class="mi-round">check_circle_outline</div>10h00 - 12h00</label>
+            </fieldset>
+            <hr>
+            <fieldset>
+                <input id="hours-3" type="checkbox">
+                <label for="hours-3"><div class="mi-round">check_circle_outline</div>12h00 - 14h00</label>
+            </fieldset>
+            <hr>
+            <fieldset>
+                <input id="hours-4" type="checkbox">
+                <label for="hours-4"><div class="mi-round">check_circle_outline</div>14h00 - 16h00</label>
+            </fieldset>
+            <hr>
+            <fieldset>
+                <input id="hours-5" type="checkbox">
+                <label for="hours-5"><div class="mi-round">check_circle_outline</div>16h00 - 18h00</label>
+            </fieldset>
+            <hr>
+            <fieldset>
+                <input id="hours-6" type="checkbox">
+                <label for="hours-6"><div class="mi-round">check_circle_outline</div>18h00 - 20h00</label>
+            </fieldset>
+            <hr>
+            <fieldset>
+                <input id="hours-7" type="checkbox">
+                <label for="hours-7"><div class="mi-round">check_circle_outline</div>+ 20h00</label>
+            </fieldset>
+        </form>
+
+        <button type="button" class="big orange bottom">Afficher les résultats</button>
+    </aside>
+{{ end }}
+
+{{ define "navigation" }}
+    {{- partial "navigation.html" . -}}
+{{ end }}

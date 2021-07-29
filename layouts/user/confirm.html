@@ -1,0 +1,18 @@
+{{ define "main" }}
+
+<section id="confirm">
+    <a href="{{ .Site.BaseURL }}"><img src="./img/logo_dd_w.svg" width="50" height="50" alt="Logo de l'app DealsDays"></a>
+    <div class="mi-round">sell</div>
+    <h1>C'est dans la poche !</h1>
+    <p id="valide">Votre deal a bien été validé</p>
+    <p id="email">Vous allez recevoir<br> un email de confirmation</p>
+    <p id="rdv">ATTENTION à bien vous présenter 10 minutes
+        avant l'heure de votre rendez-vous</p>
+    <button type="button">Voir tous mes deals</button>
+</section>
+
+{{ end }}
+
+{{ define "navigation" }}
+    {{ partial "navigation" }}
+{{ end }}
